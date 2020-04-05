@@ -13,9 +13,8 @@
 
 /*
     (Solution or Best Answer from Discussion Board)
-    {{ SOLUTION }}
 */
-
+{{ SOLUTION CODE IF CODED OUT}}
 
 let test = "XXX";
 console.log(FUNCTION(test));
