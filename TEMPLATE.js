@@ -14,7 +14,7 @@
 /*
     (Solution or Best Answer from Discussion Board)
 */
-{{ SOLUTION CODE IF CODED OUT}}
+// {{ SOLUTION CODE IF CODED OUT}}
 
 let test = "XXX";
 console.log(FUNCTION(test));
