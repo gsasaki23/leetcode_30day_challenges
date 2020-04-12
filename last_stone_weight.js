@@ -49,8 +49,33 @@ var lastStoneWeight = function(stones) {
 /*
     (Solution or Best Answer from Discussion Board)
 */
-// {{ SOLUTION CODE IF CODED OUT}}
+var lastStoneWeightSolution = function(stones) {
+    // Sort stones smallest to largest
+    stones = stones.sort((a,b)=>a-b);
+    
+    while(stones.length > 1) {
+        // Get new stone while removing the 2 largest at the time
+        const newStone = stones.pop() - stones.pop();
+        
+        // insert new stone back in at appropriate index
+        if(newStone > 0) {
+            let idx = 0;
+            // breaks when idx goes out of bounds?
+            while(newStone > stones[idx]) {
+                idx++;
+            }
+            stones.splice(idx, 0, newStone);
+        }
+        // if there are no stones, and the last 2 stones cancelled each other out
+        else if (stones.length === 0){
+            return 0;
+        }
+    }
+    
+    return stones[0];
+}
 
-let test = [1,3];
-// console.log(lastStoneWeight(test));
+
+let test = [1,3,4,7,7,800,900];
+console.log(lastStoneWeightSolution(test));
 //Expected: 1
